@@ -1,1 +1,1 @@
-web: gunicorn ambassador.wsgi
+web: gunicorn amoranalytics.wsgi
