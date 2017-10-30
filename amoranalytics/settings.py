@@ -25,7 +25,7 @@ SECRET_KEY = ')hjw!kp_z)agqrg=vw2)b%hd2dcj5t!bz!m^)1cyd5c^bav2n5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['amoremetrics1-gsussman.c9users.io']
 
 
 # Application definition

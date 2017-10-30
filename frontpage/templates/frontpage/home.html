@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Home Page - AmorMetrics</title>
+    <title>Home Page - Ambassador</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -45,16 +45,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#">SparkScientific<sup>beta</sup></a>
+                <a class="navbar-brand topnav" href="#">Ambassador</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/howitworks">How it Works</a>
                     </li>
                 </ul>
             </div>
@@ -66,36 +63,18 @@
 
     <!-- Header -->
     <a name="about"></a>
-    <div class="intro-header">
+    <div class="intro-header" style="height: 100%;
+    min-height: 600px;">
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Does Your Dating Profile Work?</h1>
-                        <h3>Custom, actionable metrics so you attract the right person and live happily every after</h3>
+                        <h1>Chat with Students from Your Dream College</h1>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <div>
-                                <h3> Sign up for our email list to get more information </h3>
-                                <form method="POST" class="email-signup">{% csrf_token %}
-                                    {% for field in form %}
-                                            {{ field.errors }}
-                                            {{ field }}
-                                            {% if field.help_text %}
-                                                <p class="help">{{ field.help_text|safe }}</p>
-                                            {% endif %}
-                                    {% endfor %}
-                                    <button type="submit" class="save btn btn-default">Save</button>
-                                </form>
-
-                                {% if messages %}
-                                    <div class="messages">
-                                        {% for message in messages %}
-                                        <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
-                                        {% endfor %}
-                                    </div>
-                                {% endif %}
+<button type="button" class="btn btn-primary btn-lg" onclick="location.href = 'https://docs.google.com/forms/d/1DR-AH4-5FJGHonRRZyOmG1UUl6W6VhsfnzjjnPf1TAc/viewform';">Get Started!</button>
                         </ul>
                     </div>
                 </div>
@@ -109,103 +88,118 @@
 
     <!-- Page Content -->
 
+<section class="features" id="features">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2>Features</h2>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 my-auto" style="
+    padding-bottom: 50px;
+    text-align: center;">
+            <div class="container-fluid">
+              <div class="row" style="padding-bottom: 20px;">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <img src="{% static 'img/brain.png' %}" style="max-width: 165px;">
+                    <h3>Questions Answered</h3>
+                    <p class="text-muted">You’ve got questions and our ambassadors have answers! Ask anything you want.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <img src="{% static 'img/mortarboard.png' %}" style="max-width: 165px;">
+                    <h3>Honest & Non-Evaluative Feedback</h3>
+                    <p class="text-muted">Ask the questions you really want to ask without the fear of being evaluated. Ambassador are not part of the admissions process and are only here to help you.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <img src="{% static 'img/notebook.png' %}" style="max-width: 165px;">
+                    <h3>Admissions Essay Content</h3>
+                    <p class="text-muted">Struggling with the college essay? Get a fresh perspective to help you answer the essay prompts.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <img src="{% static 'img/management.png' %}" style="max-width: 165px;">
+                    <h3>Current & Relevant Students</h3>
+                    <p class="text-muted">Talk to current students who have first-hand knowledge of how your interests and intended major align with the college today.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 	<a  name="services"></a>
     <div class="content-section-a">
 
         <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Products need testing &mdash; In online dating, your profile is the product</h2>
-                    <p class="lead">Every other part of your life is data-driven. Why isn’t your profile? Let’s take the guesswork out. We generate a statistical analysis of your profile to unlock what works for you.</p>
+        <div class="section-heading text-center">
+          <h2>How it Works</h2>
+        </div>
+            <div class="row" style="text-align: center;">
+                <div class="col-md-2 col-md-offset-1">
+                  <div class="feature-item">
+                    <img src="{% static 'img/one.png' %}" style="max-width: 100px; padding-bottom: 10px;">
+                    <p> Tell us your dream colleges, interests, and intended major.</p>
+                  </div>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="{% static 'img/ipad.png' %}" alt="">
+
+                <div class="col-md-2">
+                  <div class="feature-item">
+                    <img src="{% static 'img/two.png' %}" style="max-width: 100px; padding-bottom: 10px;">
+                    <p>Ambassador will match you with college ambassadors from your dream schools that align with your interests and intended major.</p>
+                  </div>
                 </div>
+
+                <div class="col-md-2">
+                  <div class="feature-item">
+                    <img src="{% static 'img/three.png' %}" style="max-width: 100px; padding-bottom: 10px;">
+                    <p>Select which college ambassadors you would like to chat with.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="feature-item">
+                    <img src="{% static 'img/four.png' %}" style="max-width: 100px; padding-bottom: 10px;">
+                    <p> Ambassador schedules the chat between you and the college ambassadors.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="feature-item">
+                    <img src="{% static 'img/five.png' %}" style="max-width: 100px; padding-bottom: 10px;">
+                    <p>Chat with the college ambassadors and get your questions answered!</p>
+                  </div>
+                </div>
+
             </div>
 
         </div>
         <!-- /.container -->
 
     </div>
-    <!-- /.content-section-a -->
 
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Data driven, because everything should be.</h2>
-                    <p class="lead">This isn’t a generic report of the dos and don’t of dating. You upload your pictures and we have a statistically significant review to find what works best with what demographics. </p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="{% static 'img/dog.png' %}" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-b -->
-
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Results by the weekend.</h2>
-                    <p class="lead">We have a 72-hour turnaround so you can optimize your profile ASAP, and find your happily ever after.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="{% static 'img/phones.png' %}" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
     <!-- /.content-section-a -->
 
 	<a  name="contact"></a>
     <div class="banner">
 
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Connect to Spark Scientific:</h2>
+                <div class="col-md-6 col-md-offset-2">
+                    <h2>Get Started with Ambassador</h2>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md">
                                             <ul class="list-inline intro-social-buttons">
                             <div>
-                                <form method="POST" class="email-signup">{% csrf_token %}
-                                    {% for field in form %}
-                                            {{ field.errors }}
-                                            {{ field }}
-                                            {% if field.help_text %}
-                                                <p class="help">{{ field.help_text|safe }}</p>
-                                            {% endif %}
-                                    {% endfor %}
-                                    <button type="submit" class="save btn btn-default">Save</button>
-                                </form>
-
-                                {% if messages %}
-                                    <div class="messages">
-                                        {% for message in messages %}
-                                        <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
-                                        {% endfor %}
-                                    </div>
-                                {% endif %}
-                        </ul>
+<button type="button" class="btn btn-primary btn-lg" onclick="location.href = 'https://docs.google.com/forms/d/1DR-AH4-5FJGHonRRZyOmG1UUl6W6VhsfnzjjnPf1TAc/viewform';">Start Now!</button>
                 </div>
             </div>
 
@@ -213,6 +207,7 @@
         <!-- /.container -->
 
     </div>
+</div>
     <!-- /.banner -->
 
     <!-- Footer -->
@@ -225,11 +220,8 @@
                             <a href="/">Home</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="/howitworks">How it Works</a>
-                        </li>
                     </ul>
-                    <p class="copyright text-muted small">Copyright &copy; SparkScientific 2016. All Rights Reserved</p>
+                    <p class="copyright text-muted small">Copyright &copy; Ambassador 2017. All Rights Reserved</p>
                 </div>
             </div>
         </div>
