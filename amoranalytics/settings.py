@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'frontpage',
     'signup',
-    'whitenoise.runserver_nostatic',
+    'whitenoise',
 ]
 
 MIDDLEWARE_CLASSES = [
