@@ -22,7 +22,6 @@ def home(request):
 def signup(request):
     if request.method == "POST":
         form = request.POST
-        print 'form is post'
         for key, values in request.POST.lists():
             print(key, values)
         name = form['name']
