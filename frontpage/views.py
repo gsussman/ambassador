@@ -29,7 +29,7 @@ def signup(request):
         major = form['majorInput']
         activites = form['activitesInput']
         colleges = form.getlist('schoolInput')
-        send_mail('Ambassador - New Signup', 'Here is the message.', 'info@findambassador.com', ['gene.sussman@gmail.com'], fail_silently=False)
+        send_mail('Ambassador - New Signup', 'Name -' + str(name) + '| Email -' + str(name) + '|', 'info@findambassador.com', ['gene.sussman@gmail.com'], fail_silently=False)
         messages.success(request, 'Thank you for signing up! We will let you know when we offically launch!') 
         return HttpResponseRedirect('/signup/')
     else:
