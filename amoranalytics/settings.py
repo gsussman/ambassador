@@ -138,7 +138,7 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'app80054133@heroku.com'
-EMAIL_HOST_PASSWORD = 'qabfzbq42473'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
